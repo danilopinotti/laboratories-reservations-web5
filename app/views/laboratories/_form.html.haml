@@ -1,0 +1,19 @@
+= form_for(@laboratory) do |f|
+  - if @laboratory.errors.any?
+    #error_explanation
+      %h2
+        = pluralize(@laboratory.errors.count, "error")
+        prohibited this laboratory from being saved:
+      %ul
+        - @laboratory.errors.full_messages.each do |message|
+          %li= message
+  .field
+    = f.label :name
+    %br/
+    = f.text_field :name
+  .field
+    = f.label :localization
+    %br/
+    = f.text_field :localization
+  .actions
+    = f.submit :class => 'btn waves-effect waves-light'

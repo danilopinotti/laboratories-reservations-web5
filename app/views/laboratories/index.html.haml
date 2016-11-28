@@ -1,0 +1,20 @@
+%p#notice= notice
+%h1 Listing Laboratories
+%table
+  %thead
+    %tr
+      %th Name
+      %th Localization
+      %th
+  %tbody
+    - @laboratories.each do |laboratory|
+      %tr
+        %td= laboratory.name
+        %td= laboratory.localization
+
+        %td
+          =link_to 'Show', laboratory, {:class => "waves-effect waves-light btn light-green lighten-1"}
+          =link_to 'Edit', edit_laboratory_path(laboratory), {:class => "waves-effect waves-light btn blue accent-3"}
+          =link_to 'Destroy', laboratory, method: :delete, data: { confirm: 'Are you sure?'}, :class => "waves-effect waves-light btn red darken-1"
+%br/
+= link_to 'New Laboratory', new_laboratory_path, {:class => "waves-effect waves-light btn blue darken-1"}
