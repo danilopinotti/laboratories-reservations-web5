@@ -1,0 +1,25 @@
+<%= form_for(@period) do |f| %>
+  <% if @period.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@period.errors.count, "error") %> prohibited this period from being saved:</h2>
+
+      <ul>
+      <% @period.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="input-field col s12">
+    <%= f.label :begin_at %><br>
+    <%= f.time_select :begin_at %>
+  </div>
+  <div class="input-field col s12">
+    <%= f.label :end_at %><br>
+    <%= f.time_select :end_at %>
+  </div>
+  <div class="actions">
+    <%= f.submit :class => 'btn waves-effect waves-light'%>
+  </div>
+<% end %>
