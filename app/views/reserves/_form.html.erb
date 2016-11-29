@@ -1,0 +1,15 @@
+<%= simple_form_for(@reserf) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.association :laboratory %>
+    <%= f.association :user %>
+    <%= f.association :begin_at, label_method: :begin_at, value_method: :id %>
+    <%= f.association :end_at, label_method: :end_at, value_method: :id %>
+    <%= f.input :day %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit, :class => 'btn waves-effect waves-light' %>
+  </div>
+<% end %>

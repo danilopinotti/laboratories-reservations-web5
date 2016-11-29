@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :reserves
+  resources :reserves
   resources :users
   resources :periods
   resources :laboratories

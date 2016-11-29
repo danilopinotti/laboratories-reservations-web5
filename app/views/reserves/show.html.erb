@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Laboratory:</strong>
+  <%= @reserf.laboratory %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @reserf.user %>
+</p>
+
+<p>
+  <strong>Begin at:</strong>
+  <%= @reserf.begin_at_id %>
+</p>
+
+<p>
+  <strong>End at:</strong>
+  <%= @reserf.end_at_id %>
+</p>
+
+<p>
+  <strong>Day:</strong>
+  <%= @reserf.day %>
+</p>
+
+<%= link_to 'Edit', edit_reserf_path(@reserf), {:class => "waves-effect waves-light btn blue"} %>
+<%= link_to 'Back', reserves_path, {:class => "waves-effect waves-light btn grey darken-1"} %>
