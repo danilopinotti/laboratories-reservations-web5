@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  bond_number: 1
+  bond_type: 1
+  technical_user: false
+  password: MyString
+  email: MyString
+
+two:
+  name: MyString
+  bond_number: 1
+  bond_type: 1
+  technical_user: false
+  password: MyString
+  email: MyString

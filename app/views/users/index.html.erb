@@ -1,0 +1,37 @@
+
+<p id="notice"><%= notice %></p>
+<h1>Listing Users</h1>
+
+<table>
+  <thead>
+    <tr>
+            <th>Name</th>
+            <th>Bond number</th>
+            <th>Bond type</th>
+            <th>Technical user</th>
+            <th>Password</th>
+            <th>Email</th>
+            <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @users.each do |user| %>
+    <tr>
+            <td><%= user.name %></td>
+            <td><%= user.bond_number %></td>
+            <td><%= user.bond_type %></td>
+            <td><%= user.technical_user %></td>
+            <td><%= user.password %></td>
+            <td><%= user.email %></td>
+            <td><%= link_to 'Show', user, {:class => "waves-effect waves-light btn light-green lighten-1"} %></td>
+      <td><%= link_to 'Edit', edit_user_path(user), {:class => "waves-effect waves-light btn blue accent-3"} %></td>
+      <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' }, :class => "waves-effect waves-light btn red darken-1" %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New User', new_user_path, {:class => "waves-effect waves-light btn blue darken-1"} %>

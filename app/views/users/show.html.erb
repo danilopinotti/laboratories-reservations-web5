@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @user.name %>
+</p>
+
+<p>
+  <strong>Bond number:</strong>
+  <%= @user.bond_number %>
+</p>
+
+<p>
+  <strong>Bond type:</strong>
+  <%= @user.bond_type %>
+</p>
+
+<p>
+  <strong>Technical user:</strong>
+  <%= @user.technical_user %>
+</p>
+
+<p>
+  <strong>Password:</strong>
+  <%= @user.password %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @user.email %>
+</p>
+
+<%= link_to 'Edit', edit_user_path(@user), {:class => "waves-effect waves-light btn blue"} %>
+<%= link_to 'Back', users_path, {:class => "waves-effect waves-light btn grey darken-1"} %>
