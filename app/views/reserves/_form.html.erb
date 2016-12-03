@@ -4,8 +4,8 @@
   <div class="form-inputs">
     <%= f.association :laboratory %>
     <%= f.association :user %>
-    <%= f.association :begin_at, label_method: :begin_at, value_method: :id %>
-    <%= f.association :end_at, label_method: :end_at, value_method: :id %>
+    <%= f.association :begin_at, label_method: :begin_at_formated, value_method: :id %>
+    <%= f.association :end_at, label_method: :end_at_formated, value_method: :id %>
     <%= f.input :day %>
   </div>
 
